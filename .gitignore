@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments and vendored dependencies
+.venv/
+venv/
+env/
+.deps/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Secrets and local configuration (.env.example stays tracked)
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.pem
+*.key
+
+# Generated databases and market cache (rebuilt by `python -m src.data_pipeline`)
+*.db
+*.sqlite
+*.sqlite3
+data/*-journal
+data/*-wal
+data/*-shm
+data/market_cache.csv
+
+# Programme-supplied documents (Project_Brief.docx names a staff member's email address)
+data/Project_Brief.docx
+data/Project_Synopsis_Template.docx
+
+# Scratch space and output caches (output/pdf/ stays tracked)
+tmp/
+tests/_tmp/
+output/**/tmp/
+output/**/cache/
+*.log
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

@@ -1,0 +1,15 @@
+column_name,data_type,nullable,description,calculation,source
+date,DATE (ISO 8601),No,Observation date,Parsed and normalised to YYYY-MM-DD,prices
+ticker,TEXT,No,NSE stock symbol or ^NSEI benchmark identifier,Uppercase supported ticker,prices
+open,REAL,No,Opening price in INR,Positive observed or supplied value,prices
+high,REAL,No,Highest price in INR for the observation,Maximum of supplied high and open and close after cleaning,prices
+low,REAL,No,Lowest price in INR for the observation,Minimum of supplied low and open and close after cleaning,prices
+close,REAL,No,Closing price in INR,Positive observed or supplied value,prices
+volume,INTEGER,No,Number of traded shares or units,Nonnegative whole number,prices
+daily_return_pct,REAL,Yes,Close-to-close percentage return for a ticker,100 * (close / previous close - 1); first observation has no return,prices
+source,TEXT,No,Whether active history is supplied synthetic or downloaded yfinance,One provenance label per active price set,prices
+portfolio_weight,REAL,Yes,Share of total portfolio value held in a stock,quantity * latest close / (cash + all holdings market value); zero holdings are absent,derived holdings
+cumulative_return,REAL,No,Portfolio total return since virtual funding,(current cash + holdings market value) / initial_cash - 1,derived portfolio
+avg_cost,REAL,Yes,Fee-inclusive weighted average acquisition cost per held share,remaining cost basis / remaining quantity,derived holdings
+realised_pnl,REAL,No,Profit or loss from completed virtual sells,net sell proceeds - sold shares at average cost,derived portfolio
+unrealised_pnl,REAL,No,Profit or loss on currently held shares,market value - remaining cost basis,derived holdings

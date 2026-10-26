@@ -1,0 +1,26 @@
+Dataset Generation Prompt
+Project: Advanced Stock Trading and Portfolio Management Application
+Domain : Digital-Data-AI / AIML
+────────────────────────────────────────────────────────────
+
+USE THIS PROMPT WITH ChatGPT / Claude / Gemini to generate additional rows:
+
+"Generate 5-year daily OHLCV data for 20 NSE/BSE stocks using yfinance (real data) or synthetic data with realistic volatility clusters"
+
+────────────────────────────────────────────────────────────
+ADDITIONAL INSTRUCTIONS FOR AI TOOL:
+- Generate the result as a CSV with the exact same columns as dataset.csv
+- Use realistic value ranges (not all zeros or random text)
+- Maintain consistent data types per column
+- Label anomalies / faults at approx 2-5% of rows (if applicable)
+- Ensure timestamps are sequential and formatted as YYYY-MM-DD HH:MM:SS
+
+COLUMNS in dataset.csv:
+date, ticker, open, high, low, close, volume, daily_return_pct
+
+CURRENT ROW COUNT: 500 rows
+SUGGESTED ADDITIONAL ROWS TO GENERATE: 4500 (to reach 5,000 total)
+
+────────────────────────────────────────────────────────────
+ETHICAL NOTE:
+Stock trading simulations must clearly state they are NOT investment advice. Use disclaimer on all outputs. Do not use real brokerage APIs in academic projects.

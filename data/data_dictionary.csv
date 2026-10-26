@@ -1,0 +1,9 @@
+column_name,data_type,sample_value_1,sample_value_2,sample_value_3,nullable,description_fill_in
+date,object/numeric,2024-01-01,2024-01-01,2024-01-01,No,date — [Learner to fill in description]
+ticker,object/numeric,RELIANCE,TCS,INFY,No,ticker — [Learner to fill in description]
+open,object/numeric,1194.27,1798.75,898.11,No,open — [Learner to fill in description]
+high,object/numeric,1197.93,1800.75,901.56,No,high — [Learner to fill in description]
+low,object/numeric,1190.5,1792.12,894.69,No,low — [Learner to fill in description]
+close,object/numeric,1207.77,1812.42,895.77,No,close — [Learner to fill in description]
+volume,object/numeric,3598561,1830320,3897769,No,volume — [Learner to fill in description]
+daily_return_pct,object/numeric,1.13,0.76,-0.26,No,daily_return_pct — [Learner to fill in description]

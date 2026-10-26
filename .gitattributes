@@ -1,0 +1,15 @@
+# Normalise line endings; the shell entrypoint must stay LF or the Linux container cannot run it.
+* text=auto
+*.sh text eol=lf
+Dockerfile text eol=lf
+*.yml text eol=lf
+*.py text eol=lf
+
+# Binary assets
+*.png binary
+*.pdf binary
+*.docx binary
+*.db binary
+
+# Keep GitHub language statistics focused on the Python source
+*.ipynb linguist-documentation

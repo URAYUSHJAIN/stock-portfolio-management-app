@@ -1,0 +1,27 @@
+{
+  "source": "supplied_synthetic",
+  "input_rows": 500,
+  "output_rows": 500,
+  "invalid_rows_dropped": 0,
+  "duplicate_keys_dropped": 0,
+  "high_bounds_fixed": 126,
+  "low_bounds_fixed": 159,
+  "weekend_rows": 140,
+  "first_return_unavailable_per_ticker": true,
+  "notes": "Supplied rows are synthetic and include calendar weekends. OHLC bounds were repaired; close-to-close returns were recalculated.",
+  "active_source": "yfinance",
+  "active_rows": 11123,
+  "market_download_rows": 11123,
+  "market_quality": {
+    "source": "yfinance",
+    "input_rows": 11123,
+    "output_rows": 11123,
+    "invalid_rows_dropped": 0,
+    "duplicate_keys_dropped": 0,
+    "high_bounds_fixed": 0,
+    "low_bounds_fixed": 0,
+    "weekend_rows": 9,
+    "first_return_unavailable_per_ticker": true,
+    "notes": "Downloaded market candles were validated and close-to-close returns were recalculated. Any weekend rows are retained as published by the provider."
+  }
+}

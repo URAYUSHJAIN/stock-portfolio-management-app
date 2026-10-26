@@ -1,0 +1,14 @@
+services:
+  portfolio-lab:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      HCL_DATA_DIR: ${HCL_DATA_DIR:-/app/data}
+      HCL_DB_PATH: ${HCL_DB_PATH:-/app/data/portfolio.db}
+    restart: unless-stopped
